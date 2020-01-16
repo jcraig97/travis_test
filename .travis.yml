@@ -2,4 +2,7 @@ services:
   - docker
 script:
   - docker image build -t jcraig97/travis_test .
+deploy:
+  provider: script
+  script: docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD && docker push jcraig97/travis_test
 
