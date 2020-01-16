@@ -1,0 +1,5 @@
+services:
+  - docker
+script:
+  - docker image build -t jcraig97/travis_test .
+
